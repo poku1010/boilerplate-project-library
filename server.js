@@ -1,5 +1,12 @@
 'use strict';
 
+const mongoose = require('mongoose');
+
+// 連接到本地 MongoDB
+mongoose.connect('mongodb+srv://freecodecamp:freecodecamp@personallibrary.2ex54.mongodb.net/?retryWrites=true&w=majority&appName=PersonalLibrary', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
+
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const cors        = require('cors');
